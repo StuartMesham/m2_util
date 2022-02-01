@@ -5,7 +5,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--f1', help='Path to file 1', required=True)
 parser.add_argument('--f2', help='Path to file 2', required=True)
 parser.add_argument('--split_names', default="['train', 'dev']")
-parser.add_argument('--split_weights', default="[0.95, 0.5]")
+parser.add_argument('--split_weights', default="[0.95, 0.05]")
 args = parser.parse_args()
 
 input_file_names = [args.f1, args.f2]
