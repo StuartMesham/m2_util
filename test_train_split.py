@@ -6,7 +6,10 @@ parser.add_argument('--f1', help='Path to file 1', required=True)
 parser.add_argument('--f2', help='Path to file 2', required=True)
 parser.add_argument('--split_names', default="['train', 'dev']")
 parser.add_argument('--split_weights', default="[0.98, 0.02]")
+parser.add_argument('--seed', type=int, default=0)
 args = parser.parse_args()
+
+random.seed(args.seed)
 
 input_file_names = [args.f1, args.f2]
 
